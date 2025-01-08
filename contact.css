@@ -1,0 +1,130 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Remove horizontal scrollbar */
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffa500; /* Orange color */
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff; /* White color */
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav a:hover {
+    color: #ffa500; /* Hover orange color */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main container */
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #ffa500;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for a more spacious look */
+    border: 2px solid #444; /* Subtle border color */
+    border-radius: 15px; /* Curved edges */
+    background-color: #222; /* Dark background for inputs */
+    color: #fff; /* White text */
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffa500; /* Highlight border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Add subtle shadow on focus */
+}
+
+textarea {
+    resize: none;
+    height: 120px; /* Increased height for better user experience */
+}
+
+/* Button styles */
+button.btn {
+    background-color: #ffa500;
+    color: #000;
+    border: none;
+    border-radius: 25px; /* More rounded button */
+    padding: 12px 25px; /* Increased padding */
+    font-size: 18px; /* Slightly larger text */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6); /* Subtle shadow on hover */
+}
+
+/* Contact info */
+.contact-info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    margin-right: 12px;
+    color: #ffa500;
+}
+
+.contact-info span {
+    font-size: 18px; /* Slightly larger font for better readability */
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ruthvik's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <nav>
+    <a href="index.html" class="logo">
+        Ruthvik<span>.</span>
+    </a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <div class="about-container">
+            <div class="sidebar">
+                <button class="tab" onclick="loadContent('about')">About Me</button>
+                <button class="tab" onclick="loadContent('education')">Education</button>
+                <button class="tab" onclick="loadContent('skills')">Skills</button>
+                <button class="tab" onclick="loadContent('experience')">Experience</button>
+                <button class="tab" onclick="loadContent('projects')">Projects</button>
+                <button class="tab" onclick="loadContent('certificates')">Certificates</button>
+            </div>
+
+            <div class="content" id="content">
+                <!-- Content will be loaded dynamically here -->
+                <h2>Welcome</h2>
+                <p>Welcome to my portfolio! Click on the options in the sidebar to explore more about me.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ruthvik Reddy Anugu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for dynamically loading content
+        function loadContent(section) {
+            const content = document.getElementById('content');
+            let html = '';
+
+            switch (section) {
+                case 'about':
+                    html = `
+                        <h2>About Me</h2>
+                        <p>Driven CS professional with expertise in Data Science, Machine Learning, Data Engineering, and Python.</p>
+                        <p>Leveraging a strong foundation in computer science and impactful projects, I aim to innovate and deliver data-driven solutions.</p>
+                        <p><strong>Name:</strong> Ruthvik Reddy</p>
+                        <p><strong>Experience:</strong> 3 Years</p>
+                        <p><strong>Languages Known:</strong> English, Hindi, Telugu</p>
+                    `;
+                    break;
+                    case 'education':
+                    html = `
+                        <div class="education-box-container">
+                            <h2>Education</h2>
+                
+                            <!-- B.Tech Box -->
+                            <div class="education-box">
+                                <h3>Bachelor of Technology</h3>
+                                <p><strong>Field:</strong> Computer Science and Engineering</p>
+                                <p><strong>Institution:</strong> GITAM University</p>
+                                <p><strong>Graduation Year:</strong> May 2018</p>
+                            </div>
+                
+                            <!-- Masters Box -->
+                            <div class="education-box">
+                                <h3>Masters</h3>
+                                <p><strong>Field:</strong> Computer Science</p>
+                                <p><strong>Institution:</strong> Kennesaw State University</p>
+                                <p><strong>Graduation Year:</strong> May 2024</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                
+                
+
+                    case 'skills':
+                    html = `
+                        <h2>Skills</h2>
+                        <div class="skills-icons">
+                            <ul>
+                                <li><i class="fab fa-python"></i> Python</li>
+                                <li><i class="fas fa-database"></i> SQL</li>
+                                <li><i class="fas fa-chart-bar"></i> Data Analysis</li>
+                                <li><i class="fas fa-brain"></i> Machine Learning</li>
+                                <li><i class="fas fa-chart-pie"></i> Power BI</li>
+                                <li><i class="fab fa-java"></i> Java</li>
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+                                <li><i class="fab fa-html5"></i> HTML</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                                <li><i class="fab fa-aws"></i> AWS</li>
+                                <li><i class="fab fa-google"></i> GCP</li>
+                            </ul>
+                        </div>
+                    `;
+                    break;
+                
+
+                    case 'experience':
+                    html = `
+                        <h2>Experience</h2>
+                
+                        <!-- Tata Consultancy Services -->
+                        <div class="experience-box">
+                            <h3>Data Analyst</h3>
+                            <p><strong>Company:</strong> Tata Consultancy Services</p>
+                            <p><strong>Duration:</strong> Nov 2020 - Oct 2022</p>
+                            <ul>
+                                <li>Diagnosed and resolved user-end transaction errors by developing and optimizing SQL queries in Oracle RDBMS.</li>
+                                <li>Automated repetitive processes using PL/SQL scripts, streamlining workflows for internal and cross-functional teams.</li>
+                                <li>Enhanced bulk data migration and conversion efficiency using SQL Loader.</li>
+                                <li>Transformed complex datasets into business-aligned formats and created comprehensive analysis reports using Tableau and Python.</li>
+                            </ul>
+                        </div>
+                
+                        <!-- Paytm -->
+                        <div class="experience-box">
+                            <h3>Data Analyst Intern</h3>
+                            <p><strong>Company:</strong> Paytm</p>
+                            <p><strong>Duration:</strong> Aug 2018 - Aug 2019</p>
+                            <ul>
+                                <li>Pre-processed a dataset of over 250,000 transactions by identifying and handling missing values, outliers, and irrelevant data fields.</li>
+                                <li>Performed exploratory data analysis using Python libraries such as Matplotlib, Seaborn, and Plotly to uncover trends and anomalies.</li>
+                                <li>Applied machine learning techniques including Isolation Forest, Local Outlier Factor (LOF), and Support Vector Machine (SVM) for fraud detection.</li>
+                                <li>Developed and deployed a fraud detection model with a focus on reducing false positives and improving detection accuracy.</li>
+                            </ul>
+                        </div>
+                    `;
+                    break;
+                
+
+                    case 'projects':
+    html = `
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <a href="https://github.com/ruthvik-reddy138/credit-card" target="_blank" class="project-card">
+                <h3>Credit Card Fraud Detection System</h3>
+                <p><strong>Tech Stack:</strong> Python, Scikit-learn, Isolation Forest, SVM</p>
+                <p>This project involved the development of a fraud detection system using machine learning algorithms like Isolation Forest and SVM to identify fraudulent transactions.</p>
+            </a>
+            <a href="https://github.com/ruthvik-reddy138/QR-code-detection-using-OpenCV" target="_blank" class="project-card">
+                <h3>Real-Time Barcode Recognition</h3>
+                <p><strong>Tech Stack:</strong> Python, OpenCV, TensorFlow</p>
+                <p>This project enables real-time barcode recognition using OpenCV for image processing and TensorFlow for object detection.</p>
+            </a>
+            <a href="https://github.com/ruthvik-reddy138/Conversational-Chatbot-using-seq2seq-with-TensorFlow" target="_blank" class="project-card">
+                <h3>Conversational Chatbot</h3>
+                <p><strong>Tech Stack:</strong> Python, TensorFlow, NLP, Seq2Seq</p>
+                <p>This chatbot project uses natural language processing (NLP) and deep learning to engage in meaningful conversations.</p>
+            </a>
+            <a href="https://github.com/ruthvik-reddy138/trust-prediction-iot" target="_blank" class="project-card">
+                <h3> Trust Prediction of IoT Providers</h3>
+                <p><strong>Tech Stack:</strong> Python, Machine Learning, IoT, Decision Trees</p>
+                <p>Predicts the trustworthiness of IoT devices using decision tree-based machine learning models.</p>
+            </a>
+            <a href="https://github.com/ruthvik-reddy138/Public-Survey-Data-Breakdown" target="_blank" class="project-card">
+                <h3> Survey Data Analysis using PowerBi </h3>
+                <p><strong>Tech Stack:</strong> Power BI, Data Visualization, SQL</p>
+                <p>Interactive Power BI dashboards for data analysis and visualization of key metrics and performance.</p>
+            </a>
+        </div>
+    `;
+    break;
+
+                
+                
+
+    case 'certificates':
+    html = `
+        <h2>Certificates</h2>
+        <div class="certificates-container">
+            <a href="https://www.linkedin.com/learning/certificates/4d05f3559a3db4b0d1aac221a062beba3e091bcc3594ff352bc971ff25c800ce?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B5kxEHhjdSI2oAL5anypDHA%3D%3D" target="_blank" class="certificate-card">
+                <h3> Learning Data Analytics: 1 Foundations</h3>
+                <p><strong>Provider:</strong> LinkedIn</p>
+                <p><strong>Issued:</strong> Dec 2024</p>
+                <p>This certificate provides comprehensive training in data analytics, including tools like SQL, R, and Tableau.</p>
+            </a>
+            <a href="https://www.hackerrank.com/certificates/iframe/2d2fd71ee0b9" target="_blank" class="certificate-card">
+                <h3>SQL Intermediate</h3>
+                <p><strong>Provider:</strong> HackerRank</p>
+                <p><strong>Issued:</strong> Jun 2024</p>
+                <p>This Certification certifies my knowledge on SQL. Where I solved numerous problems related to SQL.</p>
+            </a>
+            <a href="https://www.hackerrank.com/certificates/iframe/1f8e28e2232c" target="_blank" class="certificate-card">
+                <h3>SQL Basic</h3>
+                <p><strong>Provider:</strong> HackerRank</p>
+                <p><strong>Issued:</strong> Jul 2023</p>
+                <p>This Certification certifies my knowledge on SQL. Where I solved numerous problems related to SQL.</p>
+            </a>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/EW7GACE3JJR4" target="_blank" class="certificate-card">
+                <h3>Python Data Structures</h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> Oct 2021</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="https://www.hackerrank.com/certificates/797b056a67cd" target="_blank" class="certificate-card">
+                <h3>Python: Basi</h3>
+                <p><strong>Provider:</strong> HackerRank</p>
+                <p><strong>Issued:</strong> Mar 2021</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/URNWGGCHF6QH" target="_blank" class="certificate-card">
+                <h3>Cluster Analysis In Data Mining</h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> May 2021</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="https://coursera.org/share/b81fa2c7ad1a2036a28c705b32e9c71a" target="_blank" class="certificate-card">
+                <h3>Data Visualisation</h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> Feb 2021</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/UC73DVKAELHY" target="_blank" class="certificate-card">
+                <h3>Database Management Essentials </h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> Dec 2020</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+             <a href="https://www.coursera.org/account/accomplishments/certificate/NEL2RJSMCUH7" target="_blank" class="certificate-card">
+                <h3>HTML,CSS and Javascript for Web Developers </h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> Aug 2020</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="https://academy.ineuron.ai/certificates/downloads/PY001523.pdf" target="_blank" class="certificate-card">
+                <h3>Python For Data Science </h3>
+                <p><strong>Provider:</strong> ineuron.ai</p>
+                <p><strong>Issued:</strong> May 2020</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="" target="_blank" class="certificate-card">
+                <h3>Problem Solving and Programing with Python </h3>
+                <p><strong>Provider:</strong> Dhyanahitha Foundation</p>
+                <p><strong>Issued:</strong> Jun 2019</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+            <a href="" target="_blank" class="certificate-card">
+                <h3>Google Data Analytics Professional Certificate </h3>
+                <p><strong>Provider:</strong> Coursera</p>
+                <p><strong>Issued:</strong> Jun 2019</p>
+                <p>This Certification certifies my knowledge on Python. Where I solved numerous problems related to Python.</p>
+            </a>
+        </div>
+    `;
+    break;
+
+
+                
+
+                default:
+                    html = `<h2>Error</h2><p>Content not found.</p>`;
+            }
+
+            content.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
